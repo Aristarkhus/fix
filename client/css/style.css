@@ -9152,14 +9152,14 @@ textarea.form-control {
     border-color: rgba(255, 255, 255, 0.8);
     background: none;
     border-width: 1px;
-    color: #fff; }
+    color: #F785D3; }
 
 .right-chat-textbox input{
   width:88%;
   height:40px;
   color:#140110;
   border-radius:5px;
-  padding: 0px 10px;
+  padding: 0px 2px;
   border:1px solid #c1c1c1;
 }
 .right-chat-textbox a i{
@@ -9169,8 +9169,8 @@ textarea.form-control {
   width:40px;
   background-color:#fff;
   border-radius: 50%;
-  padding:12px 0px;
-  margin-left:20px;
+  padding:2px 0px;
+  margin-left: 2px;
 }
 .rightside-left-chat span i,.rightside-right-chat span i{
   color: #FF6CEF;
@@ -9279,11 +9279,8 @@ body{
 .message-thread {
 	overflow-y: scroll;
 	list-style-type: none;
-	height: 400px;
+	height: 340px;
 	width: 100%;
-	
-	margin: 0px !important;
-	padding: 5px !important;
 }
 
 .message-thread li {
@@ -9292,19 +9289,19 @@ body{
 	clear: both;
 	text-decoration: none;
 	list-style-type: none;
-	margin: 20px 10px 0px 20px;
+	margin: 20px 10px 0px auto;
 	float: left;
 	margin-right: 20px;
-	padding: 25px 34px;
+	padding: 10px 34px;
 	min-width: 160px;
 	min-height: 10px;
 	max-width: 350px;
 	border-radius: 5px;
-	border:solid 1px #0000001f;
-	background-color: rgba(255, 255, 255, 0.80);
+	border:solid 1px #DA43AA;
+	background-color: #DA43AA;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #444444;
+	color: #fff;
 	text-align: left;
 }
 
