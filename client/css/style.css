@@ -4231,8 +4231,11 @@ input[type="button"].btn-block {
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  margin-bottom: -1px;
-  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background-color: #F888D4;
+  color: #AD0979;
+  font-weight: bold;
   border: 1px solid rgba(0, 0, 0, 0.125); }
   .list-group-item:first-child {
     border-top-left-radius: 0.25rem;
@@ -4245,13 +4248,19 @@ input[type="button"].btn-block {
     z-index: 1;
     text-decoration: none; }
   .list-group-item.disabled, .list-group-item:disabled {
-    color: #6c757d;
-    background-color: #fff; }
+    color: #AD0979;
+    background-color: #F888D4; }
   .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #78d5ef;
-    border-color: #78d5ef; }
+    background-color: #AD0979;
+    border-color: #AD0979; }
+    .list-group-item:hover {
+      z-index: 2;
+      color: #fff;
+      background-color: #AD0979;
+      border-color: #AD0979; 
+    }
 
 .list-group-flush .list-group-item {
   border-right: 0;
