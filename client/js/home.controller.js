@@ -1,8 +1,3 @@
-/**
-* Real Time chatting app
-* @author Shashank Tiwari
-*/
-
 'user strict';
 
 app.controller('homeController', function ($scope, $routeParams, $location, appService){
