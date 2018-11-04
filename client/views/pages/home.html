@@ -5,8 +5,8 @@
           <img src="images/logos.png">
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="index-signin.php" class="nav-link">{{ data.username }}</a></li>
-                <li class="nav-item"><a ng-click="logout()" class="nav-link">Log Out</a></li>
+                <li class="nav-item active"><a href="index-signin.php" class="nav-link"> {{ data.username }} <img style="height: 25px; border-radius: 35px; margin-left: 10px;" src="images/akun-1.jpg"></a></li>
+                <li class="nav-item"><p ng-click="logout()" class="nav-link">Log Out</p></li>
             </ul>
           </div>
         </div>
@@ -29,7 +29,7 @@
                                 ng-repeat="friend in data.chatlist"
                                 ng-click="selectFriendToChat(friend.id)"
                                 ng-class="{'active':friend.id == data.selectedFriendId}"
-                            >{{friend.username}}</li>
+                            ><img style="height: 50px; border-radius: 35px; margin-right: 10px;" src="images/akun-1.jpg"> {{friend.username}}</li>
                         </ul>
                         <div class="alert alert-info" ng-if="data.chatlist.length === 0">
                             <strong>Raono sing online LURDD !!!</strong>
@@ -46,7 +46,7 @@
                 
                     <p ng-show="data.selectedFriendId !== null" ? true : false >
                     <br>
-                        <img src="image/logo.png" style="height: 40px">
+                        <img style="height: 50px; border-radius: 35px; margin-right: 10px;" src="images/akun-1.jpg">
                         <span class="message-heading"><b>{{data.selectedFriendName}}</b></span>
                     </p>
                     <div class="message-list">

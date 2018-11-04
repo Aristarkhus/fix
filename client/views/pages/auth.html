@@ -12,8 +12,8 @@
 
             <!-- Auth Page Header Tabs start -->
             <div class="auth-header">
-                <button type="button" class="btn btn-primary auth-header-btn" ng-click="active = 0">Login</button>
-                <button type="button" class="btn btn-primary auth-header-btn" ng-click="active = 1">Register</button>
+                <button style="margin-left: 70px;" type="button" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" ng-click="active = 0">Login</button>
+                <button type="button" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" ng-click="active = 1">Register</button>
             </div>
             <!-- Auth Page Header Tabs ends -->
 
@@ -39,7 +39,7 @@
                                     placeholder="Password"
                                     ng-model="data.loginPassword">
                             </div>
-                            <button class="btn btn-primary" ng-click="loginUser()" style="margin-left: 125px;">Login</button>
+                            <button class="btn btn-primary p-3 px-xl-4 py-xl-3" ng-click="loginUser()" style="margin-left: 125px;">Login</button>
                         </div>
                     </uib-tab>
                     <!-- Login Tab ends -->
@@ -60,7 +60,7 @@
                                 <div ng-show='data.usernameAvailable'>
                                     <br>
                                     <div class="alert alert-danger" role="alert">
-                                        <strong>{{ data.regUsername }}</strong> Username is already taken.
+                                        <strong>{{ data.regUsername }}</strong> wes ono sing nganggo lurd !
                                     </div>
                                 </div>
 
@@ -73,7 +73,7 @@
                                     placeholder="Password"
                                     ng-model="data.regPassword">
                             </div>
-                            <button class="btn btn-primary" ng-click="registerUser()" style="margin-left: 117px;">Register</button>
+                            <button class="btn btn-primary p-3 px-xl-4 py-xl-3" ng-click="registerUser()" style="margin-left: 117px;">Register</button>
                         </div>
                     </uib-tab>
                     <!-- Register Tab ends -->
