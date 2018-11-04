@@ -9243,9 +9243,9 @@ body{
 .home-header {
 	width: 100%;
 	padding: 1% 1% 1% 1%;
-	background: #007bff;
+	background-color: #000000;
 	margin-bottom: 20px;
-	color: #ffffff;
+	color: #CE1894;
 }
 
 .home-body {
@@ -9264,6 +9264,7 @@ body{
 	background-color: rgba(255, 255, 255, 0.80);
 	margin: 10px 0px 10px 10px;
 	border-radius: 5px;
+  background: transparent;
 }
 
 .message-thread {
@@ -9271,7 +9272,7 @@ body{
 	list-style-type: none;
 	height: 400px;
 	width: 100%;
-	border: solid 1px #BDBDBD;
+	
 	margin: 0px !important;
 	padding: 5px !important;
 }
