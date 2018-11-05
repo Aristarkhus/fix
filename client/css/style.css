@@ -4091,13 +4091,13 @@ input[type="button"].btn-block {
     color: #0b2e13; }
 
 .alert-info {
-  color: #0c5460;
-  background-color: #d1ecf1;
+  color: #fff;
+  background-color: #FF69B4;
   border-color: #bee5eb; }
   .alert-info hr {
     border-top-color: #abdde5; }
   .alert-info .alert-link {
-    color: #062c33; }
+    color: #fff; }
 
 .alert-warning {
   color: #856404;
@@ -4259,7 +4259,7 @@ input[type="button"].btn-block {
       z-index: 2;
       color: #fff;
       background-color: #AD0979;
-      border-color: #AD0979; 
+      border-color: #AD0979;
     }
 
 .list-group-flush .list-group-item {
@@ -9234,7 +9234,7 @@ body{
 	width: 400px;
 	margin: auto;
 	padding: 5%;
-	
+
 }
 
 .auth-header-btn{

@@ -8,13 +8,13 @@ class Socket{
     constructor(socket){
         this.io = socket;
     }
-    
+
     socketEvents(){
 
         this.io.on('connection', (socket) => {
 
             /**
-            * get the user's Chat list
+            * Chatlist
             */
             socket.on('chat-list', async (userId) => {
 
@@ -24,7 +24,7 @@ class Socket{
 
                     chatListResponse.error = true;
                     chatListResponse.message = `User does not exits.`;
-                    
+
                     this.io.emit('chat-list-response',chatListResponse);
                 }else{
                     const result = await helper.getChatList(userId, socket.id);
@@ -42,36 +42,36 @@ class Socket{
                 }
             });
             /**
-            * send the messages to the user
+            * mengirim pesan ke user
             */
             socket.on('add-message', async (data) => {
-                
+
                 if (data.message === '') {
-                    
-                    this.io.to(socket.id).emit(`add-message-response`,`Message cant be empty`); 
+
+                    this.io.to(socket.id).emit(`add-message-response`,`Message cant be empty`);
 
                 }else if(data.fromUserId === ''){
-                    
-                    this.io.to(socket.id).emit(`add-message-response`,`Unexpected error, Login again.`); 
+
+                    this.io.to(socket.id).emit(`add-message-response`,`Unexpected error, Login again.`);
 
                 }else if(data.toUserId === ''){
-                    
-                    this.io.to(socket.id).emit(`add-message-response`,`Select a user to chat.`); 
 
-                }else{                    
+                    this.io.to(socket.id).emit(`add-message-response`,`Select a user to chat.`);
+
+                }else{
                     let toSocketId = data.toSocketId;
                     const sqlResult = await helper.insertMessages({
                         fromUserId: data.fromUserId,
                         toUserId: data.toUserId,
                         message: data.message
                     });
-                    this.io.to(toSocketId).emit(`add-message-response`, data); 
-                }               
+                    this.io.to(toSocketId).emit(`add-message-response`, data);
+                }
             });
 
 
             /**
-            * Logout the user
+            * Logout
             */
             socket.on('logout', async () => {
                 const isLoggedOut = await helper.logoutUser(socket.id);
@@ -83,7 +83,7 @@ class Socket{
 
 
             /**
-            * sending the disconnected user to all socket users. 
+            * logout
             */
             socket.on('disconnect',async ()=>{
                 const isLoggedOut = await helper.logoutUser(socket.id);
@@ -102,12 +102,12 @@ class Socket{
         });
 
     }
-    
+
     socketConfig(){
 
         this.io.use( async (socket, next) => {
             let userId = socket.request._query['userId'];
-            let userSocketId = socket.id;          
+            let userSocketId = socket.id;
             const response = await helper.addSocketId( userId, userSocketId);
             if(response &&  response !== null){
                 next();

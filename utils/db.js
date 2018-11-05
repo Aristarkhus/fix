@@ -1,3 +1,5 @@
+//untuk mengatur database connectiom
+
 const mysql = require('mysql');
 
 class Db {

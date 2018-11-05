@@ -1,8 +1,10 @@
+//untuk import dan select ke database
+
 'user strict';
 const DB = require('./db');
 
 class Helper{
-	
+
 	constructor(app){
 		this.db = DB;
 	}
@@ -92,16 +94,16 @@ class Helper{
 		} catch (error) {
 			console.warn(error);
 			return null;
-		}		
+		}
 	}
 
 	async getMessages(userId, toUserId){
 		try {
 			return await this.db.query(
-				`SELECT id,from_user_id as fromUserId,to_user_id as toUserId,message FROM message WHERE 
+				`SELECT id,from_user_id as fromUserId,to_user_id as toUserId,message FROM message WHERE
 					(from_user_id = ? AND to_user_id = ? )
 					OR
-					(from_user_id = ? AND to_user_id = ? )	ORDER BY id ASC				
+					(from_user_id = ? AND to_user_id = ? )	ORDER BY id ASC
 				`,
 				[userId, toUserId, toUserId, userId]
 			);

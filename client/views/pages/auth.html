@@ -5,17 +5,17 @@
           <img src="image/logos.png" style="height: 200px; margin-left: 60px;">
           <br><br><br>
 
-            <!-- Auth Page Header Tabs start -->
+            <!-- Pilihan regis / login-->
             <div class="auth-header">
                 <button style="margin-left: 70px;" type="button" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" ng-click="active = 0">Login</button>
                 <button type="button" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" ng-click="active = 1">Register</button>
             </div>
-            <!-- Auth Page Header Tabs ends -->
+
 
 
             <div class="auth-content">
                 <uib-tabset active="active">
-                    <!-- Login Tab starts -->
+                    <!-- Fungsi Login-->
                     <uib-tab index="0">
                         <div class="login">
                             <div class="form-group">
@@ -37,8 +37,8 @@
                             <button class="btn btn-primary p-3 px-xl-4 py-xl-3" ng-click="loginUser()" style="margin-left: 125px;">Login</button>
                         </div>
                     </uib-tab>
-                    <!-- Login Tab ends -->
-                    <!-- Register Tab starts -->
+
+                    <!--Fungsi Register -->
                     <uib-tab index="1">
                         <div class="register">
                             <div class="form-group">
@@ -71,7 +71,7 @@
                             <button class="btn btn-primary p-3 px-xl-4 py-xl-3" ng-click="registerUser()" style="margin-left: 117px;">Register</button>
                         </div>
                     </uib-tab>
-                    <!-- Register Tab ends -->
+                  
                 </uib-tabset>
             </div>
         </div>
